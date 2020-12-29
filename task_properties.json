@@ -1,0 +1,619 @@
+{
+  "tasks" : {
+    "user" : [ {
+      "key" : "_a_editRequestTask",
+      "name" : "Edit Requask",
+      "paths" : [ {
+        "key" : "cancel",
+        "cancel" : true,
+        "takeExpression" : "$.btn('cancelled')",
+        "destinationWorkflowTaskKey" : "fm_completed"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_st_autoDesignChange"
+      } ],
+      "buttons" : [ {
+        "text" : "Cancel Ticket",
+        "style" : "btn-primary",
+        "value" : "cancelled",
+        "comments" : false,
+        "sequence" : 1,
+        "validateForm" : false
+      }, {
+        "text" : "Submit",
+        "style" : "btn-primary",
+        "value" : "submit",
+        "comments" : false,
+        "sequence" : 2
+      } ],
+      "properties" : {
+        "sla" : 1,
+        "form" : "Full Form - Editable",
+        "config" : {
+          "tasks" : {
+            "visible" : false
+          },
+          "changes" : {
+            "visible" : true,
+            "editable" : true,
+            "validate" : {
+              "changes" : false,
+              "requirement" : true
+            },
+            "changePlanner" : {
+              "visible" : false,
+              "autoSelect" : {
+                "forceSelection" : false,
+                "selectionMethod" : "NONE"
+              },
+              "addressMatchingScope" : "INTERSECTS",
+              "suggestedDeviceGroupId" : 1,
+              "autoRunSuggestedDevices" : true
+            },
+            "importRequirements" : {
+              "visible" : true
+            }
+          },
+          "analysis" : {
+            "visible" : false
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "visible" : false
+          }
+        },
+        "attributeLevelSecurity" : true
+      },
+      "description" : "Task used to collect additional information, including Requirement Details."
+    }, {
+      "key" : "_a_designTask",
+      "name" : "Design",
+      "paths" : [ {
+        "key" : "cancel",
+        "cancel" : true,
+        "takeExpression" : "$.btn('cancelled')",
+        "destinationWorkflowTaskKey" : "fm_completed"
+      }, {
+        "key" : "autoDesign",
+        "takeExpression" : "$.btn('autoDesign')",
+        "destinationWorkflowTaskKey" : "_st_autoDesignChange"
+      }, {
+        "key" : "regress_editRequest",
+        "takeExpression" : "$.btn('needMoreInfo')",
+        "destinationWorkflowTaskKey" : "_a_editRequestTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_st_preChangeAssessment"
+      } ],
+      "buttons" : [ {
+        "text" : "Cancel Ticket",
+        "style" : "btn-primary",
+        "value" : "cancelled",
+        "comments" : false,
+        "sequence" : 1,
+        "validateForm" : false
+      }, {
+        "text" : "Auto Design",
+        "style" : "btn-default",
+        "value" : "autoDesign",
+        "comments" : false,
+        "sequence" : 2,
+        "validateForm" : false
+      }, {
+        "text" : "Need More Info",
+        "style" : "btn-primary",
+        "value" : "needMoreInfo",
+        "comments" : false,
+        "sequence" : 3,
+        "validateForm" : false
+      }, {
+        "text" : "Complete",
+        "style" : "btn-primary",
+        "value" : "complete",
+        "comments" : false,
+        "sequence" : 4
+      } ],
+      "properties" : {
+        "form" : "Full form – Read-only",
+        "config" : {
+          "tasks" : {
+            "visible" : false
+          },
+          "changes" : {
+            "visible" : true,
+            "editable" : true,
+            "validate" : {
+              "changes" : true,
+              "requirement" : true
+            },
+            "ruleChange" : {
+              "visible" : true
+            },
+            "objectChange" : {
+              "visible" : true
+            },
+            "changePlanner" : {
+              "visible" : true,
+              "autoSelect" : {
+                "forceSelection" : false,
+                "selectionMethod" : "NONE"
+              },
+              "addressMatchingScope" : "INTERSECTS",
+              "autoRunSuggestedDevices" : true
+            },
+            "generalChange" : {
+              "visible" : true
+            },
+            "importRequirements" : {
+              "visible" : false
+            }
+          },
+          "analysis" : {
+            "visible" : false
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "changePlanner" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "visible" : false
+          }
+        }
+      },
+      "description" : "Allows a user to utilize Rule Recommendation tools and create/edit a Change Plan."
+    }, {
+      "key" : "_b_reviewTask",
+      "name" : "Review",
+      "paths" : [ {
+        "key" : "cancel",
+        "cancel" : true,
+        "takeExpression" : "$.btn('cancelled')",
+        "destinationWorkflowTaskKey" : "fm_completed"
+      }, {
+        "key" : "regress_design",
+        "takeExpression" : "$.btn('rejected')",
+        "destinationWorkflowTaskKey" : "_a_designTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_st_deviceAutomationGeneration"
+      } ],
+      "buttons" : [ {
+        "text" : "Cancel Ticket",
+        "style" : "btn-primary",
+        "value" : "cancelled",
+        "comments" : false,
+        "sequence" : 1,
+        "validateForm" : false
+      }, {
+        "text" : "Reject",
+        "style" : "btn-primary",
+        "value" : "rejected",
+        "comments" : false,
+        "sequence" : 2,
+        "validateForm" : false
+      }, {
+        "text" : "Approve",
+        "style" : "btn-primary",
+        "value" : "approved",
+        "comments" : false,
+        "sequence" : 3
+      } ],
+      "properties" : {
+        "form" : "Full form – Read-only",
+        "config" : {
+          "tasks" : {
+            "visible" : false
+          },
+          "changes" : {
+            "visible" : true
+          },
+          "analysis" : {
+            "visible" : true,
+            "editable" : true,
+            "validate" : true
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "visible" : false
+          }
+        }
+      },
+      "description" : "Presents the results of PCA and allows users to accept or reject the design for each requirement on the ticket."
+    }, {
+      "key" : "_c_implementTask",
+      "name" : "Implement",
+      "paths" : [ {
+        "key" : "cancel",
+        "cancel" : true,
+        "takeExpression" : "$.btn('cancelled')",
+        "destinationWorkflowTaskKey" : "fm_completed"
+      }, {
+        "key" : "regress_design",
+        "takeExpression" : "$.btn('redesign')",
+        "destinationWorkflowTaskKey" : "_a_designTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_d_verifyTask"
+      } ],
+      "buttons" : [ {
+        "text" : "Cancel Ticket",
+        "style" : "btn-primary",
+        "value" : "cancelled",
+        "comments" : false,
+        "sequence" : 1,
+        "validateForm" : false
+      }, {
+        "text" : "Redesign",
+        "style" : "btn-primary",
+        "value" : "redesign",
+        "comments" : false,
+        "sequence" : 2,
+        "validateForm" : false
+      }, {
+        "text" : "Complete",
+        "style" : "btn-primary",
+        "value" : "complete",
+        "comments" : false,
+        "sequence" : 3
+      } ],
+      "properties" : {
+        "form" : "Full form – Read-only",
+        "config" : {
+          "tasks" : {
+            "visible" : true,
+            "editable" : true,
+            "automation" : {
+              "commitIndicator" : "false",
+              "useEnforcementWindows" : "false"
+            }
+          },
+          "changes" : {
+            "visible" : true
+          },
+          "analysis" : {
+            "visible" : false
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "visible" : false
+          }
+        }
+      },
+      "description" : "Lists changes which should be implemented.  An enforcement job will continuously check tickets in this task and attempt to implement those in configured Enforcement Window, or users may manually implement changes at any time."
+    }, {
+      "key" : "_d_verifyTask",
+      "name" : "Verify",
+      "paths" : [ {
+        "key" : "regress_implement",
+        "takeExpression" : "$.btn('reimplement')",
+        "destinationWorkflowTaskKey" : "_c_implementTask"
+      }, {
+        "key" : "regress_design",
+        "takeExpression" : "$.btn('redesign')",
+        "destinationWorkflowTaskKey" : "_a_designTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_st_customPropertyUpdate"
+      } ],
+      "buttons" : [ {
+        "text" : "Redesign",
+        "style" : "btn-primary",
+        "value" : "redesign",
+        "comments" : false,
+        "sequence" : 1,
+        "validateForm" : false
+      }, {
+        "text" : "Reimplement",
+        "style" : "btn-primary",
+        "value" : "reimplement",
+        "comments" : false,
+        "sequence" : 2,
+        "validateForm" : false
+      }, {
+        "text" : "Verify",
+        "style" : "btn-primary",
+        "value" : "verified",
+        "comments" : false,
+        "sequence" : 3
+      } ],
+      "properties" : {
+        "config" : {
+          "tasks" : {
+            "visible" : false
+          },
+          "changes" : {
+            "visible" : true
+          },
+          "analysis" : {
+            "visible" : false
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "auto" : {
+              "enabled" : true,
+              "completeTaskOnSuccess" : true
+            },
+            "visible" : true,
+            "editable" : true,
+            "validate" : true
+          },
+          "verificationProcesses" : {
+            "RULE" : [ "fmManagementStationMatchVerificationProcess", "fmRuleSearchMatchPostVerificationProcess", "fmChangeControlNumberMatchVerificationProcess", "fmChangeLogAssociationPostVerificationProcess" ],
+            "OBJECT" : [ "fmObjectVerificationProcess" ],
+            "GENERAL" : [ "fmGeneralVerificationProcess" ]
+          }
+        }
+      },
+      "description" : "Queues changes for verification.  An auto verify job will continuously check tickets in this task and attempt to verify, or users may manually verify changes at any time."
+    } ],
+    "firemon" : [ {
+      "key" : "fm_create",
+      "name" : "Create",
+      "paths" : [ {
+        "key" : "preChangeAssessment",
+        "takeExpression" : "$.sys('poTicketConversion') != null and $.sys('poTicketConversion') and !$.sys('needsDesign')",
+        "destinationWorkflowTaskKey" : "_st_preChangeAssessment"
+      }, {
+        "key" : "design",
+        "takeExpression" : "$.sys('poTicketConversion') != null and $.sys('poTicketConversion') and $.sys('needsDesign')",
+        "destinationWorkflowTaskKey" : "_a_designTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_a_editRequestTask"
+      } ],
+      "properties" : {
+        "form" : "Short form – Summary and Requestor fields only",
+        "config" : {
+          "changes" : {
+            "visible" : false
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : true
+          }
+        }
+      },
+      "description" : "Beginning of workflow; initial task which creates the ticket with summary and requestor information."
+    }, {
+      "key" : "fm_completed",
+      "name" : "Completed",
+      "properties" : {
+        "form" : "Full form – Read-only",
+        "config" : {
+          "tasks" : {
+            "visible" : false
+          },
+          "changes" : {
+            "visible" : true,
+            "position" : 0,
+            "validate" : {
+              "changes" : true,
+              "requirement" : true
+            },
+            "changePlanner" : {
+              "visible" : true,
+              "autoSelect" : {
+                "forceSelection" : false,
+                "selectionMethod" : "NONE"
+              },
+              "addressMatchingScope" : "INTERSECTS",
+              "autoRunSuggestedDevices" : true
+            },
+            "importRequirements" : {
+              "visible" : true
+            }
+          },
+          "analysis" : {
+            "visible" : true,
+            "editable" : false,
+            "validate" : false
+          },
+          "comments" : {
+            "visible" : true,
+            "editable" : false,
+            "validate" : false
+          },
+          "exportPdf" : {
+            "visible" : true
+          },
+          "attachments" : {
+            "visible" : true,
+            "editable" : false
+          },
+          "taskHistory" : {
+            "visible" : true
+          },
+          "ticketHistory" : {
+            "visible" : true
+          },
+          "verificationAssistant" : {
+            "visible" : true,
+            "editable" : false,
+            "validate" : false
+          }
+        }
+      },
+      "description" : "End of workflow; read-only view of completed and canceled tickets."
+    } ],
+    "service" : [ {
+      "key" : "_st_preChangeAssessment",
+      "name" : "Prechange Assessment",
+      "paths" : [ {
+        "key" : "pca_fail",
+        "takeExpression" : "$.sys('pcaExitStatus') == 'FAIL'",
+        "destinationWorkflowTaskKey" : "_a_editRequestTask"
+      }, {
+        "key" : "pca_pass",
+        "takeExpression" : "$.sys('pcaExitStatus') == 'PASS'",
+        "destinationWorkflowTaskKey" : "_st_deviceAutomationGeneration"
+      }, {
+        "key" : "pca_review",
+        "destinationWorkflowTaskKey" : "_b_reviewTask"
+      } ],
+      "properties" : {
+        "config" : {
+          "serviceTask" : "PRE_CHANGE_ASSESSMENT_TASK",
+          "severityResultField" : "cumulativeSeverity",
+          "PRE_CHANGE_ASSESSMENT_TASK" : {
+            "controlTypes" : [ "ALLOWED_SERVICES", "SERVICE_RISK_ANALYSIS", "RULE_SEARCH", "DEVICE_ACCESS_ANALYSIS", "NETWORK_ACCESS_ANALYSIS" ],
+            "autoPassIfNoNewFailures" : false
+          }
+        }
+      },
+      "description" : "Simulates changes from the ticket's Change Plan and runs relevant assessments."
+    }, {
+      "key" : "_st_deviceAutomationGeneration",
+      "name" : "Device Automation Generation",
+      "paths" : [ {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_c_implementTask"
+      } ],
+      "properties" : {
+        "config" : {
+          "serviceTask" : "PACKET_AUTOMATION_GENERATION_TASK"
+        }
+      },
+      "description" : "Generates CLI for changes in the Change Plan when enabled in Device settings."
+    }, {
+      "key" : "_st_customPropertyUpdate",
+      "name" : "Custom Property Update",
+      "paths" : [ {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "fm_completed"
+      } ],
+      "properties" : {
+        "config" : {
+          "serviceTask" : "CUSTOM_PROPERTY_UPDATE_TASK",
+          "propertyMaps" : {
+            "ruleTagMapping" : true,
+            "ruleCustomPropertyMap" : {
+              "customer" : "customer",
+              "businessKey" : "change_control_number",
+              "businessNeed" : "business_justification",
+              "_requirements" : {
+                "review" : "review_date",
+                "expiration" : "_expiration_date"
+              },
+              "requesterName" : "requestor",
+              "applicationName" : "application_name",
+              "applicationOwner" : "owner",
+              "externalTicketId" : "external_ticket_id"
+            }
+          }
+        }
+      },
+      "description" : "Updates Rule Custom Properties and tags on verified rules with values from the ticket."
+    }, {
+      "key" : "_st_autoDesignChange",
+      "name" : "Auto Design Change",
+      "paths" : [ {
+        "key" : "design",
+        "takeExpression" : "!$.sys('autoDesignSuccess') and $.sys('accessExists') == null",
+        "destinationWorkflowTaskKey" : "_a_designTask"
+      }, {
+        "key" : "customPropertyUpdate",
+        "takeExpression" : "!$.sys('autoDesignSuccess') and $.sys('accessExists')",
+        "destinationWorkflowTaskKey" : "_st_customPropertyUpdate"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_st_preChangeAssessment"
+      } ],
+      "properties" : {
+        "config" : {
+          "serviceTask" : "AUTO_DESIGN_CHANGE_TASK",
+          "AUTO_DESIGN_CHANGE_TASK" : {
+            "execute" : true,
+            "autoSelect" : {
+              "forceSelection" : false,
+              "selectionMethod" : "NONE"
+            },
+            "accessExistsCheck" : false,
+            "addressMatchingScope" : "INTERSECTS",
+            "modifyRecommendationBehavior" : "MODIFY"
+          }
+        }
+      },
+      "description" : "Attempts to create a Change Plan for Add Access, Clone Server, and Decommission Server requirement type.  For Add Access requirements, determines whether access exists."
+    } ]
+  }
+}
