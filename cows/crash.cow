@@ -1,0 +1,70 @@
+# Crash Bandicoot
+# by Community, edited and converted by Charc0al
+# Generated with Charc0al's cowsay file converter http://charc0al.github.io/cowsay-files/converter
+
+$x = "\e[49m  ";          #reset color
+$t = "$thoughts ";
+$a = "\e[48;5;52m  ";
+$b = "\e[48;5;235m  ";
+$c = "\e[48;5;166m  ";
+$d = "\e[48;5;208m  ";
+$e = "\e[48;5;252m  ";
+$f = "\e[48;5;231m  ";
+$g = "\e[48;5;88m  ";
+$h = "\e[48;5;28m  ";
+$i = "\e[48;5;239m  ";
+$j = "\e[48;5;179m  ";
+$k = "\e[48;5;222m  ";
+$l = "\e[48;5;94m  ";
+$m = "\e[48;5;245m  ";
+$n = "\e[48;5;250m  ";
+$o = "\e[48;5;25m  ";
+$p = "\e[48;5;32m  ";
+$q = "\e[48;5;18m  ";
+$r = "\e[48;5;236m  ";
+
+$the_cow = <<EOC
+          $t
+            $t
+              $t                  $a$x
+                                  $a  $x
+            $b    $x        $a$x$a    $x$b  $x
+            $b$c$d$b$x    $a$b$a      $b$c$b$x
+            $b$c$a$d$b$x$b      $a    $b    $x
+            $b$c$a  $d$b$c$b      $a$b      $x
+              $b$a  $d$c  $e$f$e$b$g$b$e$b$x
+              $b$c$a$d$c$d$f  $h  $c  $h$x
+                $b$c$d    $e$f$h$b$c$d$b  $x
+                $b$c$d    $c$e$f  $d  $f$b$x  $b  $x
+                $b$c  $d                $c$b  $i$b$x
+              $b  $c  $j$k  $c$d      $c$k$j$b  $x
+            $b$c  $d$j$k$l$j$k              $b$x
+            $b$c$d  $j$k  $l  $j$k      $j$b$x
+          $b$c  $d  $j  $k    $l      $b  $x
+          $b$c$d  $b$c$j  $k        $b  $x
+          $b$c$d$b  $c$j          $b$c  $b$x
+          $b$d  $b  $c$j          $b$c  $b$x
+        $b$c$d$b$x$b$c  $j  $k    $b$c  $b$x
+        $b$c$d$b$x  $b$c$j$k    $j$b$c$d  $b$x
+        $b$c$d$b$x  $b$c$j$k    $b    $d  $b$x
+        $b$d  $b$x  $b$c$j$k    $b$x  $b$d$b$x
+        $b$d$b$x      $b$c$j$k  $b$x  $b$d$g$b$x
+      $b$a$d$b$x      $b$c$j$l$k$b$x$b$a  $g$b$x
+      $b$a$g  $b$x    $b  $m$n  $b  $a    $g  $b$x
+    $b$a  $g$a  $b$x$b$o        $b  $c$b$a  $g$b$x
+    $b$a  $g$b$d$b$x$b$o          $b    $a    $b$x
+    $b$a    $b      $o  $p  $b$o$p$b  $c  $a$b$x
+      $b$a$c$d$b$x$b$o$p    $b$o$p  $b      $x
+        $b    $x  $b$o$p  $b    $o$p$b$x
+                $b$o  $p$b$x  $b$q  $b$x
+                $b$q    $b$x  $b$o  $b$x
+                $b$o$p  $b$x  $b      $x
+                $b        $x    $b$c$x
+                  $b$c$b$x      $b    $x
+                  $b    $x      $b$r  $b$x
+                $b$i$f$i$b$x  $b$r  $i$f$b    $x
+                $b$r$i  $b$x  $b$r    $i    $f$b$x
+              $b$r$n$f  $r$b$x$b$m  $n  $f  $n$b$x
+              $b$m  $n$f$n$b$x$b                $x
+              $b            $x
+EOC

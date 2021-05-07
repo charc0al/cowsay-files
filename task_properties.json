@@ -2,7 +2,7 @@
   "tasks" : {
     "user" : [ {
       "key" : "_a_editRequestTask",
-      "name" : "Edit Requask",
+      "name" : "Edit Request",
       "paths" : [ {
         "key" : "cancel",
         "cancel" : true,
@@ -47,7 +47,6 @@
                 "selectionMethod" : "NONE"
               },
               "addressMatchingScope" : "INTERSECTS",
-              "suggestedDeviceGroupId" : 1,
               "autoRunSuggestedDevices" : true
             },
             "importRequirements" : {
@@ -203,11 +202,11 @@
         "destinationWorkflowTaskKey" : "fm_completed"
       }, {
         "key" : "regress_design",
-        "takeExpression" : "$.btn('rejected')",
-        "destinationWorkflowTaskKey" : "_a_designTask"
+        "takeExpression" : "$.btn('approved')",
+        "destinationWorkflowTaskKey" : "_c_implementTask"
       }, {
         "key" : "default",
-        "destinationWorkflowTaskKey" : "_st_deviceAutomationGeneration"
+        "destinationWorkflowTaskKey" : "_a_designTask"
       } ],
       "buttons" : [ {
         "text" : "Cancel Ticket",
@@ -228,7 +227,8 @@
         "style" : "btn-primary",
         "value" : "approved",
         "comments" : false,
-        "sequence" : 3
+        "sequence" : 3,
+        "validateForm" : true
       } ],
       "properties" : {
         "form" : "Full form – Read-only",
@@ -523,12 +523,8 @@
         "takeExpression" : "$.sys('pcaExitStatus') == 'FAIL'",
         "destinationWorkflowTaskKey" : "_a_editRequestTask"
       }, {
-        "key" : "pca_pass",
-        "takeExpression" : "$.sys('pcaExitStatus') == 'PASS'",
-        "destinationWorkflowTaskKey" : "_st_deviceAutomationGeneration"
-      }, {
         "key" : "pca_review",
-        "destinationWorkflowTaskKey" : "_b_reviewTask"
+        "destinationWorkflowTaskKey" : "_st_deviceAutomationGeneration"
       } ],
       "properties" : {
         "config" : {
@@ -545,8 +541,12 @@
       "key" : "_st_deviceAutomationGeneration",
       "name" : "Device Automation Generation",
       "paths" : [ {
-        "key" : "default",
+        "key" : "_st_deviceAutomationGeneration_vcacyvtlg",
+        "takeExpression" : "$.sys('pcaExitStatus') == 'PASS'",
         "destinationWorkflowTaskKey" : "_c_implementTask"
+      }, {
+        "key" : "default",
+        "destinationWorkflowTaskKey" : "_b_reviewTask"
       } ],
       "properties" : {
         "config" : {

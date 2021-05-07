@@ -1092,6 +1092,10 @@ M###################@%=           =+%
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/cow2.png" height="200" />
 
 
+## crash.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/crash.png" height="200" />
+
+
 ## cthulhu-mini.cow
 ```
  ______________ 
