@@ -2697,6 +2697,10 @@ C{ ( o o )}
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/meeseeks.png" height="200" />
 
 
+## meeseeks2.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/meeseeks2.png" height="200" />
+
+
 ## megaman.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/megaman.png" height="200" />
 
