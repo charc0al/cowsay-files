@@ -1853,6 +1853,10 @@ $@#MX %+;-                           .
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/grinch.png" height="200" />
 
 
+## grogu.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/grogu.png" height="200" />
+
+
 ## gruntilda.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/gruntilda.png" height="200" />
 
