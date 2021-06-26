@@ -2605,6 +2605,10 @@ C{ ( o o )}
 ```
 
 
+## mandalorian.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/mandalorian.png" height="200" />
+
+
 ## marine.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/marine.png" height="200" />
 
