@@ -84,6 +84,10 @@
 ```
 
 
+## a-train.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/a-train.png" height="200" />
+
+
 ## abominable.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/abominable.png" height="200" />
 
@@ -606,6 +610,10 @@ H@:         :HHHHHHHHHHHHHHHHHHX,    =@H
 ```
 
 
+## black-noir.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/black-noir.png" height="200" />
+
+
 ## bob.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/bob.png" height="200" />
 
@@ -777,6 +785,10 @@ X################,      -$=X#######@:
 
 ## bullet-king.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/bullet-king.png" height="200" />
+
+
+## butcher.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/butcher.png" height="200" />
 
 
 ## buzz-lightyear.cow
@@ -1252,6 +1264,10 @@ snd     [_____________]
 
 ## death.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/death.png" height="200" />
+
+
+## deep.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/deep.png" height="200" />
 
 
 ## deus-ex.cow
@@ -1987,6 +2003,10 @@ $@#MX %+;-                           .
 
 ## hodor.cow
 <img src="https://charc0al.github.io/cowsay-files/converter/src_images/hodor.png" height="200" />
+
+
+## homelander.cow
+<img src="https://charc0al.github.io/cowsay-files/converter/src_images/homelander.png" height="200" />
 
 
 ## homer-shining.cow

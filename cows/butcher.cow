@@ -1,0 +1,79 @@
+# Billy Butcher (The Boys)
+# by @roblevypixels
+# Generated with Charc0al's cowsay file converter http://charc0al.github.io/cowsay-files/converter
+
+$x = "\e[49m  ";          #reset color
+$t = "$thoughts ";
+$a = "\e[48;5;235m  ";
+$b = "\e[48;5;234m  ";
+$c = "\e[48;5;233m  ";
+$d = "\e[48;5;236m  ";
+$e = "\e[48;5;237m  ";
+$f = "\e[48;5;223m  ";
+$g = "\e[48;5;238m  ";
+$h = "\e[48;5;231m  ";
+$i = "\e[48;5;94m  ";
+$j = "\e[48;5;180m  ";
+$k = "\e[48;5;137m  ";
+$l = "\e[48;5;138m  ";
+$m = "\e[48;5;239m  ";
+$n = "\e[48;5;181m  ";
+$o = "\e[48;5;244m  ";
+$p = "\e[48;5;66m  ";
+$q = "\e[48;5;23m  ";
+$r = "\e[48;5;250m  ";
+$s = "\e[48;5;109m  ";
+$u = "\e[48;5;251m  ";
+$v = "\e[48;5;248m  ";
+$w = "\e[48;5;246m  ";
+
+$the_cow = <<EOC
+          $t
+            $t
+              $t            $a$x
+                $t      $b$c$a$b$c$a  $x  $a$x
+                    $b$c$b$c$b$a$b$a$b$d$b$a$b  $d$x
+                    $b$a$c$a$c$d$b$a$b$a$b$a$e  $d$b$x
+                  $b$c$a$c$a$b$a  $b$a$e$b$d  $b$a$d$x
+                  $b    $c$a$b$a$d$b$a$e$b$d$b$d  $e$x
+                $c  $a$b    $a$b$d$b$a$d$e$b$d$a$e$a  $x
+                $b  $c$b$f    $a$b$a$b$d$f    $d$a$d$e$x
+                $a$b$c  $f                    $a  $e$g$a$x
+                $c$a$c$f                        $a$g$a$x
+              $b$a$c$b$f$d    $f        $d    $f$e$a$g$x
+                $b$a$f  $h$i$x$d  $f$d  $x$i$h$f  $g$e$x
+                $j$a$f  $h$i$x$h$f    $h$x$i$h$f  $g$f$x
+                $k$b$f  $h  $i  $f    $i  $h  $f  $e$j$x
+                $j$b$f            $j$f            $e$f$x
+                  $a  $f        $j$f            $e  $x
+                    $a$b$f      $j  $f        $a  $x
+                      $a$f    $d$b$d$a$d$f    $e$x
+                      $a$b$f$e$l        $g$f$a$e$x
+                    $m$x$d$b$a$f$n    $f$e$a$g$x$o$x
+                  $m$d  $x$a$b$d$f    $d$a$e$x$m  $o$x
+                $g$d    $c$x$a$e$b$d$a$g$e$x$b$m    $o$x
+                $g$d    $c$d$x$b$d$a$d$a$x$d$b$m    $o$x
+                $c$m$d$c$p$d$j$x        $j$d$p$b$m$o$a$x
+          $b      $c$d$c$q$p$d$j        $d$p$q$b$m$a$e$d$g  $x
+        $b        $c$d$c$p$q$p$d$f    $d$p$q$p$b$m$a$e$d$g    $x
+        $c$b    $c$g$d$c$p$q$r$d$f    $d$p$q$p$b$m$o$a$g$d$g  $x
+        $c$b  $c$g$d  $c$s$p$q$p$d$f$d$p$q$p$s$b$m  $o$a$d$g$d$x
+      $b$c$b  $c$g$d    $c$p  $q$p$d$p$q$p  $b$m    $o$a$d$g$d$g$x
+      $c$b      $c$g$d  $c$s$p$q$p$u$p$q$p$s$b$m  $o$a$d$g  $d$g$x
+      $c$b        $c$g$d$c$p$s$q$p$d$p$q$s$p$b$m$o$a$e  $d$g    $x
+      $b  $c$b      $c$d  $c$p  $q$d$q$p  $b$m  $a$e    $d$g    $x
+    $b    $c$b  $x$b  $c$d$c$s$p$q$d$q$p$s$c$m$a$d$e$x$e  $x
+    $c$b    $c$b$x$b  $c$d$c$s  $q$r$q$s  $c$m$a$d$e$x$e  $o  $g$x
+    $c$b    $c$b$x$b    $c$d$c$p$s$d$s$p$c$m$b$d$e  $x$e    $o  $g$x
+    $c  $b      $x$b    $c$d$c$p  $d$p  $c$m$b$d$e  $x$d$e    $o$g$x
+        $b    $c$x  $b  $c$d$c$p$s$d$s$p$c$m$b$d$e  $x$d$e    $o$g$x
+        $b  $x$j    $x$b$c$d$c$p  $v$p  $c$m$b$d$e  $x$e$a  $o$g  $x
+            $j      $x$o                                    $e  $x
+            $j        $x$a  $d                  $e            $x$f  $x
+              $j    $x                                        $f    $x
+                    $b    $c$q$p$q$w$q$p$q$c$a  $d$x    $f        $x
+                  $b  $c$b$c$q$p$q$d$q$p$q$c$a$b$a$d$x  $f        $x
+                  $b  $c$b$c$p$q  $d$q  $p$c$a$b$a  $x
+                  $b  $c$b$c                $a$b$a$b$x
+                  $b  $c$b$c$b$c$a$o$a$c$a$c$a$b$a$b$x
+EOC
